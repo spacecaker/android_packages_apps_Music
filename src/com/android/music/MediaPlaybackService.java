@@ -164,15 +164,8 @@ public class MediaPlaybackService extends Service {
     // This will have to change if we want to support multiple simultaneous cards.
     private int mCardId;
     
-    private MediaAppWidgetProvider mAppWidgetProvider = MediaAppWidgetProvider.getInstance();
-
-    private MediaAppWidgetProvider2 mAppWidgetProvider2 = MediaAppWidgetProvider2.getInstance();
-
-    private MediaAppWidgetProvider3 mAppWidgetProvider3 = MediaAppWidgetProvider3.getInstance();
-
-    private MediaAppWidgetProvider4 mAppWidgetProvider4 = MediaAppWidgetProvider4.getInstance();
-    
-    private MediaAppWidgetProvider5 mAppWidgetProvider5 = MediaAppWidgetProvider5.getInstance();
+    private MediaAppWidgetProvider4x1 mAppWidgetProvider4x1 = MediaAppWidgetProvider4x1.getInstance();
+    private MediaAppWidgetProvider4x2 mAppWidgetProvider4x2 = MediaAppWidgetProvider4x2.getInstance();
     
     // interval after which we stop the service when idle
     private static final int IDLE_DELAY = 60000;
