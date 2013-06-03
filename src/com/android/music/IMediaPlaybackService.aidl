@@ -21,7 +21,8 @@ import android.graphics.Bitmap;
 
 interface IMediaPlaybackService
 {
-    void openFile(String path);
+    void openFile(String path, boolean oneShot);
+    void openFileAsync(String path);
     void open(in long [] list, int position);
     int getQueuePosition();
     boolean isPlaying();
@@ -30,8 +31,6 @@ interface IMediaPlaybackService
     void play();
     void prev();
     void next();
-    void cycleRepeat();
-    void toggleShuffle();
     long duration();
     long position();
     long seek(long pos);
@@ -40,8 +39,6 @@ interface IMediaPlaybackService
     long getAlbumId();
     String getArtistName();
     long getArtistId();
-    String getAlbumartistName();
-    long getAlbumartistId();
     void enqueue(in long [] list, int action);
     long [] getQueue();
     void moveQueueItem(int from, int to);
@@ -55,6 +52,4 @@ interface IMediaPlaybackService
     void setRepeatMode(int repeatmode);
     int getRepeatMode();
     int getMediaMountedCount();
-    int getAudioSessionId();
 }
-
